@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/kmh/src/AS-Cones/local-6.2.0/lib64'
+libdir='/home/centos/Projects/NIST-BGP-SRx/local-6.2.0/lib64'

@@ -32,7 +32,7 @@ bgp/bgpsecio-BGPHeader.o: bgp/BGPHeader.c /usr/include/stdc-predef.h \
  antd-util/prefix.h ASNTokenizer.h updateStackUtil.h cfg/configuration.h \
  config.h antd-util/stack.h antd-util/linked_list.h \
  bgpsec/BGPSecPathBin.h ASList.h \
- /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
+ /home/centos/Projects/NIST-BGP-SRx/local-6.2.0/include/srx/srxcryptoapi.h \
  /usr/include/sys/param.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
@@ -191,7 +191,7 @@ bgpsec/BGPSecPathBin.h:
 
 ASList.h:
 
-/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
+/home/centos/Projects/NIST-BGP-SRx/local-6.2.0/include/srx/srxcryptoapi.h:
 
 /usr/include/sys/param.h:
 

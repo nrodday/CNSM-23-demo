@@ -47,7 +47,7 @@ bgpsecio-bgpsecio.o: bgpsecio.c /usr/include/stdc-predef.h \
  /usr/include/openssl/crypto.h /usr/include/openssl/stack.h \
  /usr/include/openssl/safestack.h /usr/include/openssl/opensslv.h \
  /usr/include/openssl/symhacks.h \
- /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
+ /home/centos/Projects/NIST-BGP-SRx/local-6.2.0/include/srx/srxcryptoapi.h \
  config.h /usr/include/sys/param.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
@@ -272,7 +272,7 @@ bgpsecio-bgpsecio.o: bgpsecio.c /usr/include/stdc-predef.h \
 
 /usr/include/openssl/symhacks.h:
 
-/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
+/home/centos/Projects/NIST-BGP-SRx/local-6.2.0/include/srx/srxcryptoapi.h:
 
 config.h:
 

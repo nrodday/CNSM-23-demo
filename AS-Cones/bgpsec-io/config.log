@@ -344,7 +344,7 @@ configure:11611: checking weather to enable printcrypto
 configure:11621: result: no
 configure:11635: checking for library containing pthread_create
 configure:11666: gcc -o conftest -O0 -g   conftest.c  >&5
-/tmp/ccgzPZpm.o: In function `main':
+/tmp/ccEBnlVf.o: In function `main':
 /home/centos/CNSM/CNSM-23-demo/AS-Cones/bgpsec-io/conftest.c:34: undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 configure:11666: $? = 1
@@ -405,7 +405,7 @@ configure:11759: $? = 0
 configure:11776: result: none required
 configure:11796: checking for library containing config_init
 configure:11827: gcc -o conftest -O0 -g   conftest.c -lpthread  >&5
-/tmp/cchxMEjA.o: In function `main':
+/tmp/ccdbeP9r.o: In function `main':
 /home/centos/CNSM/CNSM-23-demo/AS-Cones/bgpsec-io/conftest.c:35: undefined reference to `config_init'
 collect2: error: ld returned 1 exit status
 configure:11827: $? = 1
