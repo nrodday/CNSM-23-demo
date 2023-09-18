@@ -1,0 +1,33 @@
+help
+cache
+addASCONE 1111 2222 1
+addASCONE 2222 3333
+addASCONE 2222 3333 1
+cache
+addASPANow 1 7777 8888
+cache
+removeNow 3
+cache
+cache
+removeNow 2
+removeNow 1
+cache
+cache
+cache
+cache
+cache
+addASCONENow 2222 3333 1
+cache
+cache
+cache
+addASCONENow 1111 2222 1
+cache
+cache
+cache
+cache
+addASCONENow 1111 2222 1
+addASCONENow 2222 3333 1
+cache
+cache
+addASCONENow 1111 2222 1
+addASCONE 2222 3333 1
