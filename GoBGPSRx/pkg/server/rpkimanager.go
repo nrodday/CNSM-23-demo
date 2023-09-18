@@ -84,15 +84,14 @@ func (rm *RPKIManager) handleVerifyNotify(vn *VerifyNotify) {
 // Input is a raw string containing the message from the server and a pointer to the rpkimanager
 func (rm *RPKIManager) handleVerifyNotifyBuffer(vn *VerifyNotify) {
 	*rm.Ready = false
-	//invalid := false
-	/*if log.GetLevel() == log.DebugLevel {
+	if log.GetLevel() == log.DebugLevel {
 		printValRes(*vn)
-	}*/
+	}
 
 	// Find the matching Update instance + index
 	update, i := rm.findUpdateInstance(vn.RequestToken, vn.UpdateIdentifier)
 	if update == nil {
-		//log.Fatal("Found no matching Update")
+		log.Debug("Found no matching Update")
 		*rm.Ready = true
 		rm.Queue = rm.Queue[1:]
 		return
@@ -216,17 +215,18 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 			prefix_len:           "18",
 			request_token:        fmt.Sprintf("%08X", update.local_id) + "03",
 			prefix:               "00000000",
-			origin_AS:            "0000fdec",
-			length_path_val_data: "00000008",
+			origin_AS:            "00000000",
+			length_path_val_data: "00000000",
 			bgpsec_length:        "0000",
 			afi:                  "0000",
+			num_of_hops:          "0000",
 			safi:                 "00",
 			prefix_len_bgpsec:    "00",
 			ip_pre_add_byte_a:    "00000000",
 			ip_pre_add_byte_b:    "00000000",
 			ip_pre_add_byte_c:    "00000000",
 			ip_pre_add_byte_d:    "00000000",
-			local_as:             fmt.Sprintf("%08X", rm.AS),
+			local_as:             "00000000",
 			as_path_list:         "",
 			bgpsec:               "",
 		}
@@ -237,7 +237,6 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 		}
 		if peer.fsm.pConf.Config.BgpsecEnable {
 			tmpFlag += 2
-
 			//vm.bgpsec = rm.GenerateBGPSecFields(e)
 			update.path = false
 		}
@@ -276,17 +275,15 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 		vm.prefix = tmp[len(tmp)-8:]
 		vm.prefix_len = strconv.FormatInt(int64(prefixLen), 16)
 		vm.origin_AS = fmt.Sprintf("%08X", asList[len(asList)-1])
-		vm.num_of_hops = fmt.Sprintf("%04X", path.GetAsPathLen())
 		tmpInt := 4 * path.GetAsPathLen()
 		vm.Length = fmt.Sprintf("%08X", 61+tmpInt)
-		vm.length_path_val_data = fmt.Sprintf("%08X", tmpInt)
-		vm.origin_AS = fmt.Sprintf("%08X", path.GetSourceAs())
 
 		// Debug
-		/*if log.GetLevel() == log.DebugLevel {
+		if log.GetLevel() == log.DebugLevel {
 			printValReq(vm)
-		}*/
+		}
 		updatesToSend = append(updatesToSend, structToString(vm))
+		printValReq(vm)
 		rm.PendingUpdates = append(rm.PendingUpdates, &update)
 		rm.ID = (rm.ID % 10000) + 1
 	}
