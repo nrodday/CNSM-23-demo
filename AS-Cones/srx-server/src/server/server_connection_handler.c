@@ -714,13 +714,6 @@ bool processValidationRequest(ServerConnectionHandler* self,
 
   if (pathId == 0)  // if not found in  cEntry
   { 
-    printf("\nDebug: Generating PathID from:\n");
-    printf("Debug: bgpData.local_as: %u\n", ntohl(bgpData.local_as));
-    if(ntohl(bgpData.local_as)> 9999){
-      printf("Debug: local_as is incorrect!!!!\n");
-      kill(getpid(), SIGSEGV);
-    }
-    printf("Debug: UGLY HACK REMOVE\n");
 
 
 

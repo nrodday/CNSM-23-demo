@@ -873,8 +873,9 @@ uint8_t validateASCONE (PATH_LIST* asPathList, uint8_t length, AS_TYPE asType,
           }
         }
       }
-
-      
+      if(tmpPolicyResult==ASCONE_RESULT_UNKNOWN&&tmpAsconeResult==ASCONE_RESULT_UNKNOWN){
+        return SRx_RESULT_UNKNOWN;
+      }
       // No ASN on the path has an INVALID marking on the route.
       printf("Debug: validateASCONE Result: VALID - no invalid marking\n");
       return SRx_RESULT_VALID;      
