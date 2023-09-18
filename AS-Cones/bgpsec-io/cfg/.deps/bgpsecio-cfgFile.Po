@@ -32,7 +32,7 @@ cfg/bgpsecio-cfgFile.o: cfg/cfgFile.c /usr/include/stdc-predef.h \
  /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
  /usr/include/ifaddrs.h cfg/configuration.h config.h antd-util/stack.h \
  antd-util/linked_list.h bgpsec/BGPSecPathBin.h ASList.h \
- /home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
+ /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
  /usr/include/sys/param.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
@@ -190,7 +190,7 @@ bgpsec/BGPSecPathBin.h:
 
 ASList.h:
 
-/home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
+/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
 
 /usr/include/sys/param.h:
 

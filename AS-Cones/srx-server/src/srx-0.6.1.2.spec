@@ -49,7 +49,7 @@ using the rtr-to-cache protocol (RFC8210).
 %setup -q
 
 %build
-%configure --prefix=/usr --sysconfdir=/etc sca_dir=/home/kmh/src/AS-Cones/local-6.2.0 patricia_dir= 
+%configure --prefix=/usr --sysconfdir=/etc sca_dir=/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0 patricia_dir= 
 make %{?_smp_mflags}
 
 %install

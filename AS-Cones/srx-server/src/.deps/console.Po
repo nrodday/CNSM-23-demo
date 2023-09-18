@@ -18,8 +18,8 @@ console.o: server/console.c /usr/include/stdc-predef.h \
  shared/srx_packets.h /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/getopt.h \
- /home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h config.h \
- /usr/include/sys/types.h /usr/include/endian.h \
+ /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
+ config.h /usr/include/sys/types.h /usr/include/endian.h \
  /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
  /usr/include/bits/byteswap-16.h /usr/include/sys/select.h \
  /usr/include/bits/select.h /usr/include/bits/time.h \
@@ -47,7 +47,7 @@ console.o: server/console.c /usr/include/stdc-predef.h \
  server/configuration.h server/console.h server/command_handler.h \
  server/bgpsec_handler.h server/key_cache.h server/update_cache.h \
  util/rwlock.h server/rpki_handler.h server/prefix_cache.h \
- /home/kmh/src/AS-Cones/srx-server/src/../extras/local/include/patricia.h \
+ /home/centos/CNSM/CNSM-23-demo/AS-Cones/srx-server/src/../extras/local/include/patricia.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -137,7 +137,7 @@ shared/srx_packets.h:
 
 /usr/include/getopt.h:
 
-/home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
+/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
 
 config.h:
 
@@ -259,7 +259,7 @@ server/rpki_handler.h:
 
 server/prefix_cache.h:
 
-/home/kmh/src/AS-Cones/srx-server/src/../extras/local/include/patricia.h:
+/home/centos/CNSM/CNSM-23-demo/AS-Cones/srx-server/src/../extras/local/include/patricia.h:
 
 /usr/include/errno.h:
 

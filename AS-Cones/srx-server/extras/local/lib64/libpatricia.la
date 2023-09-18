@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/kmh/src/AS-Cones/srx-server/extras/local/lib64'
+libdir='/home/centos/CNSM/CNSM-23-demo/AS-Cones/srx-server/extras/local/lib64'

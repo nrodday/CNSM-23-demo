@@ -13,8 +13,8 @@ ski_cache.o: server/ski_cache.c /usr/include/stdc-predef.h \
  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/xlocale.h \
- /home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h config.h \
- /usr/include/sys/param.h \
+ /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
+ config.h /usr/include/sys/param.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
@@ -101,7 +101,7 @@ ski_cache.o: server/ski_cache.c /usr/include/stdc-predef.h \
 
 /usr/include/xlocale.h:
 
-/home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
+/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
 
 config.h:
 

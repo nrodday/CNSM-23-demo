@@ -1,6 +1,6 @@
 rpki_handler.o: server/rpki_handler.c /usr/include/stdc-predef.h \
- /home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h config.h \
- /usr/include/sys/types.h /usr/include/features.h \
+ /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
+ config.h /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
@@ -48,7 +48,7 @@ rpki_handler.o: server/rpki_handler.c /usr/include/stdc-predef.h \
  /usr/include/bits/setjmp.h /usr/include/semaphore.h \
  /usr/include/bits/semaphore.h util/rwlock.h util/slist.h \
  server/rpki_handler.h server/prefix_cache.h \
- /home/kmh/src/AS-Cones/srx-server/src/../extras/local/include/patricia.h \
+ /home/centos/CNSM/CNSM-23-demo/AS-Cones/srx-server/src/../extras/local/include/patricia.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -58,7 +58,7 @@ rpki_handler.o: server/rpki_handler.c /usr/include/stdc-predef.h \
 
 /usr/include/stdc-predef.h:
 
-/home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
+/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
 
 config.h:
 
@@ -252,7 +252,7 @@ server/rpki_handler.h:
 
 server/prefix_cache.h:
 
-/home/kmh/src/AS-Cones/srx-server/src/../extras/local/include/patricia.h:
+/home/centos/CNSM/CNSM-23-demo/AS-Cones/srx-server/src/../extras/local/include/patricia.h:
 
 /usr/include/errno.h:
 

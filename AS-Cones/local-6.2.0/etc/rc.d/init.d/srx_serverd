@@ -18,9 +18,9 @@
 # Source function library.
 . /etc/rc.d/init.d/functions
 
-exec=/home/kmh/src/AS-Cones/local-6.2.0/bin/srx_server
+exec=/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/bin/srx_server
 prog="srx_server"
-config="-f /home/kmh/src/AS-Cones/local-6.2.0/etc/srx_server.conf"
+config="-f /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/etc/srx_server.conf"
 pid=0
 
 status() {

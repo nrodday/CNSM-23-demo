@@ -48,8 +48,8 @@ bgpsec/bgpsecio-Crypto.o: bgpsec/Crypto.c /usr/include/stdc-predef.h \
  /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
  /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
  /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
- /home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h config.h \
- /usr/include/sys/param.h /usr/include/signal.h \
+ /home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h \
+ config.h /usr/include/sys/param.h /usr/include/signal.h \
  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
  /usr/include/bits/sigstack.h /usr/include/sys/ucontext.h \
@@ -251,7 +251,7 @@ bgpsec/bgpsecio-Crypto.o: bgpsec/Crypto.c /usr/include/stdc-predef.h \
 
 /usr/include/bits/netdb.h:
 
-/home/kmh/src/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
+/home/centos/CNSM/CNSM-23-demo/AS-Cones/local-6.2.0/include/srx/srxcryptoapi.h:
 
 config.h:
 
