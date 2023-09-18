@@ -74,6 +74,7 @@ func (rm *RPKIManager) findUpdateInstance(token string, SRxID string) (*srx_upda
 }
 
 func (rm *RPKIManager) handleVerifyNotify(vn *VerifyNotify) {
+	log.Debug("Recieved new input")
 	rm.Queue = append(rm.Queue, vn)
 	if *rm.Ready {
 		rm.handleVerifyNotifyBuffer(rm.Queue[0])
@@ -83,7 +84,9 @@ func (rm *RPKIManager) handleVerifyNotify(vn *VerifyNotify) {
 // Callback function: The proxy can call this function when the SRx-Server sends a verify notify
 // Input is a raw string containing the message from the server and a pointer to the rpkimanager
 func (rm *RPKIManager) handleVerifyNotifyBuffer(vn *VerifyNotify) {
+	log.Debug("Handling Verify Notify.")
 	*rm.Ready = false
+	//invalid := false
 	if log.GetLevel() == log.DebugLevel {
 		printValRes(*vn)
 	}
@@ -215,7 +218,7 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 			prefix_len:           "18",
 			request_token:        fmt.Sprintf("%08X", update.local_id) + "03",
 			prefix:               "00000000",
-			origin_AS:            "00000000",
+			origin_AS:            "0000fdec",
 			length_path_val_data: "00000000",
 			bgpsec_length:        "0000",
 			afi:                  "0000",
@@ -237,6 +240,7 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 		}
 		if peer.fsm.pConf.Config.BgpsecEnable {
 			tmpFlag += 2
+
 			//vm.bgpsec = rm.GenerateBGPSecFields(e)
 			update.path = false
 		}
@@ -275,13 +279,16 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 		vm.prefix = tmp[len(tmp)-8:]
 		vm.prefix_len = strconv.FormatInt(int64(prefixLen), 16)
 		vm.origin_AS = fmt.Sprintf("%08X", asList[len(asList)-1])
+		vm.num_of_hops = fmt.Sprintf("%04X", path.GetAsPathLen())
 		tmpInt := 4 * path.GetAsPathLen()
 		vm.Length = fmt.Sprintf("%08X", 61+tmpInt)
+		vm.length_path_val_data = fmt.Sprintf("%08X", tmpInt)
+		vm.origin_AS = fmt.Sprintf("%08X", path.GetSourceAs())
 
 		// Debug
-		if log.GetLevel() == log.DebugLevel {
+		/*if log.GetLevel() == log.DebugLevel {
 			printValReq(vm)
-		}
+		}*/
 		updatesToSend = append(updatesToSend, structToString(vm))
 		printValReq(vm)
 		rm.PendingUpdates = append(rm.PendingUpdates, &update)
@@ -290,6 +297,7 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 
 	// call proxy function to send message to SRx-Server for each update path
 	for _, str := range updatesToSend {
+
 		validate_call(&rm.Proxy, str)
 	}
 }
