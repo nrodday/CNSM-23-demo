@@ -1,0 +1,18 @@
+#
+# The RPKI Cache Test Harness does not really have any configurations
+# The port is handed over during the start of the cache
+#
+# This script file shows how the cache can be pre-loaded
+#
+echo "This is the BGP-SRx RPKI Cache Test Harness"
+
+addASPA 0 65000 65005
+addASPA 0 65005 65015
+addASPA 0 65015 65005
+addASPA 0 65025 65015 65020
+addASPA 0 65020 65010
+addASPA 0 65040 65020
+notify
+
+echo "Cache Contents:"
+cache
