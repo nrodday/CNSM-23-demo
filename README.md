@@ -20,7 +20,7 @@ cd path/to/AS-Cones/local-6.2.0/bin
 cd path/to/AS-Cones/local-6.2.0/bin
 ./srx_server -f [...]
 
-# Terminal 1: Check if the SRx-Server is connected to the RPI
+# Terminal 1: Check if the SRx-Server is connected to the RPKI
 > clients 
 
 # Terminal 3: Start GoBGPSRx daemon 
