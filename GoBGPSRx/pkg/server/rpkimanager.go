@@ -284,6 +284,7 @@ func (rm *RPKIManager) validate(peer *peer, m *bgp.BGPMessage, e *fsmMsg) {
 		vm.Length = fmt.Sprintf("%08X", 61+tmpInt)
 		vm.length_path_val_data = fmt.Sprintf("%08X", tmpInt)
 		vm.origin_AS = fmt.Sprintf("%08X", path.GetSourceAs())
+		vm.local_as = fmt.Sprintf("%08X", rm.AS)
 
 		// Debug
 		/*if log.GetLevel() == log.DebugLevel {
